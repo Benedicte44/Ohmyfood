@@ -28,8 +28,55 @@
 /* angles des coins des plats dans les menus */
 /*Ombres*/
 /*ombre des cards, listes page d'accueil...*/
-/*@import "./Utils/placeholders";
-@import "./Utils/keyframes";*/
+/*@import "./Utils/placeholders";*/
+/* Définition des animations de la page d'accueil*/
+/* Animation du coeur des cards*/
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    color: #9356dc;
+    opacity: 20%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+    color: #ff79da;
+  }
+}
+/* Animation du loader */
+@keyframes loaderlogo {
+  0% {
+    transform: scaleY(1.1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+  100% {
+    transform: scaleY(1.1);
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    opacity: 0.98;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes menucat {
+  from {
+    transform: translatey(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   /* Opera/IE 8+ */
@@ -164,8 +211,87 @@ article {
   transform: scale(1.05);
 }
 
-/*@import "./Components/loader";
-@import "./Components/arrowback";*/
+/*Mise en forme du loader lors du chargement de la page*/
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  visibility: hidden;
+  animation: loader 2000ms;
+}
+.loader__image {
+  position: fixed;
+  top: 50%;
+  z-index: 101;
+  animation: loaderlogo 1000ms backwards;
+}
+.loader__image img {
+  width: 100%;
+}
+.loader__image--2 {
+  transform: scaleY(2);
+  animation-delay: 100ms;
+}
+.loader__image--3 {
+  transform: scaleY(3);
+  animation-delay: 150ms;
+}
+.loader__image--4 {
+  transform: scaleY(4);
+  animation-delay: 200ms;
+}
+.loader__image--5 {
+  transform: scaleY(5);
+  animation-delay: 250ms;
+}
+.loader__image--6 {
+  transform: scaleY(6);
+  animation-delay: 300ms;
+}
+.loader__image--7 {
+  transform: scaleY(7);
+  animation-delay: 350ms;
+}
+.loader__image--8 {
+  transform: scaleY(8);
+  animation-delay: 400ms;
+}
+.loader__image--9 {
+  transform: scaleY(9);
+  animation-delay: 450ms;
+}
+.loader__image--10 {
+  transform: scaleY(10);
+  animation-delay: 500ms;
+}
+.loader__image--11 {
+  transform: scaleY(11);
+  animation-delay: 550ms;
+}
+.loader__image--12 {
+  transform: scaleY(12);
+  animation-delay: 600ms;
+}
+.loader__image--13 {
+  transform: scaleY(13);
+  animation-delay: 650ms;
+}
+.loader__logo {
+  position: fixed;
+  top: 50%;
+  z-index: 102;
+}
+.loader__logo img {
+  width: 100%;
+}
+
+/*@import "./Components/arrowback";*/
 /*Mise en forme du header*/
 header {
   display: flex;

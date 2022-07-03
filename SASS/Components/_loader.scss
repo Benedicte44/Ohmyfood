@@ -1,0 +1,37 @@
+/*Mise en forme du loader lors du chargement de la page*/@at-root
+.loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: $backgroundcards;
+    z-index: 100;
+    visibility: hidden;
+    animation: loader 2000ms;
+    &__image {
+        position: fixed;
+        top: 50%;
+        z-index: 101;
+        img {
+            width: 100%;
+        }
+        animation: loaderlogo 1000ms backwards;
+        @for $i from 2 through 13 {
+            &--#{$i} {
+                transform: scaleY($i);
+                animation-delay: 50ms * $i;
+            }
+        }
+    }
+    &__logo {
+        position: fixed;
+        top: 50%;
+        z-index: 102;
+        img {
+            width: 100%;
+        }
+    }
+}

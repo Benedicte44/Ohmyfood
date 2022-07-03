@@ -1,0 +1,52 @@
+/* Définition des animations de la page d'accueil*/
+
+/* Animation du coeur des cards*/
+@keyframes heart {
+    0% {
+        transform: scale(0);
+        color: $primary;
+        opacity: 20%;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 100%;
+        color: $secondary;
+    }
+}
+
+/* Animation du loader */
+@keyframes loaderlogo {
+    0% {
+        transform: scaleY(1.1);
+    }
+    50% {
+        transform: scaleY(2);
+    }
+    100% {
+        transform: scaleY(1.1);
+    }
+}
+
+@keyframes loader {
+    0% {
+        visibility: visible;
+    }
+    99% {
+        opacity: 0.98;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes menucat {
+    from {
+        transform: translatey(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,154 @@
+/*Mise en forme des pages de menus*/
+
+.restopic {
+    height: 318px;
+    overflow: hidden;
+    img {
+        width: 110%;
+        position: relative;
+        left: -20px;
+    }
+}
+
+.menus {
+    position: relative;
+    top: -107px;
+    border-radius: $radiusmenus $radiusmenus 0 0;
+    padding: 35px 15px 0px 20px;
+    margin-bottom: -45px;
+    background-color: $backgroundcol;
+    &__nomresto {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 15px;
+        letter-spacing: 0.7px;
+        h2 {
+            font-family: $policelogo;
+            font-size: $policesizetitle * 1.1;
+            color: $policenomresto;
+            font-weight: lighter;
+        }
+    }
+    &__order {
+        text-align: center;
+        margin-top: 35px;
+        input {
+            padding: 15px 45px;
+        }
+    }
+}
+
+.menu {
+    margin-top: 35px;
+    &__category {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-size: $policesectitledish * 0.85;
+            font-weight: 300;
+            padding-bottom: 8px;
+            position: relative;
+            margin-bottom: 13px;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 12%;
+                height: 1px;
+                bottom: 0;
+                left: 0%;
+                border-bottom: 3px solid $tertiary;
+            }
+        }
+    }
+    &__sstitlemargin {
+        margin-top: 25px;
+    }
+    &__dish {
+        display: flex;
+        align-items: flex-end;
+        border-radius: $radiusdish;
+        background-color: $backgroundcards;
+        box-shadow: $shadowlist;
+        cursor: pointer;
+        margin: 0px -5px 14px -7px;
+        position: relative;
+        overflow: hidden;
+        animation: menucat 1000ms backwards;
+        @for $i from 1 through 12 {
+            &--#{$i} {
+                animation-delay: 0.3s * $i;
+            }
+        }
+        &title {
+            width: 80%;
+            padding: 13px 0px 12px 10px;
+            h4 {
+                font-size: $policesizetitle * 0.75;
+                margin-bottom: 1.4%;
+            }
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: $policesize1 * 0.8;
+                letter-spacing: -0.1px;
+            }
+        }
+        .menu__check {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            right: -55px;
+            transition: transform 400ms;
+            p {
+                font-weight: bold;
+                padding: 0px 22px 12px 0px;
+                font-size: $policesize1 * 0.75;
+            }
+        }
+        .menu__selector {
+            background-color: $tertiary;
+            padding: 0% 0 20% 0;
+            width: 55px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            i {
+                color: $policecheck;
+                font-size: $policesize1 * 1.2;
+            }
+        }
+        &:hover {
+            .menu__check {
+                transform: translateX(-55px);
+            }
+            .menu__dishtitle {
+                width: 60%;
+            }
+            h4 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+/*Code responsive*/
+@media screen and (min-width: 992px) {
+    .menus {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__category {
+            width: 30%;
+        }
+    }
+}

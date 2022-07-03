@@ -1,0 +1,11 @@
+/*Mise en forme flèche retour du header*/
+
+.arrowback {
+    position: absolute;
+    font-size: $isize*1.1;
+    left: 22px;
+    padding-top: 3px;
+    &:hover {
+        color: $primary;
+    }
+}

@@ -1,0 +1,186 @@
+/**** Mise en forme de la page d'accueil ****/
+
+/*zone accueillant la zone de saisie pour la ville recherchée par l'utilisateur*/
+.location {
+    height: 49px;
+    background-color: darken($backgroundcol, 5%);
+    color: lighten(#000000, 30%);
+    @include centerflex;
+    padding-left: 50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+    i {
+        font-size: $policesize1 * 0.9;
+    }
+    .ville {
+        color: lighten(#000000, 30%);
+        font-size: $policesize1 * 0.85;
+        font-weight: bolder;
+        border: none;
+        background-color: darken($backgroundcol, 5%);
+        margin-top: 4px;
+        margin-left: 15px;
+    }
+}
+
+/*zone de présentation */
+.accroche {
+    height: 280px;
+    @include centerflex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 50px 40px 35px;
+    letter-spacing: 0.1px;
+    p {
+        margin: 15px -25px 30px 0px;
+        font-size: $policesize1 * 0.95;
+        color: lighten(#000000, 30%);
+        letter-spacing: -0.1px;
+    }
+    a {
+        padding-left: 22px;
+    }
+}
+
+/* zone d'explication du fonctionnement du site*/
+.rules {
+    padding: 45px 20px 50px 20px;
+    background-color: $backgroundcards;
+    ul {
+        list-style-type: none;
+        padding-left: 15px;
+        padding-top: 25px;
+        li a {
+            height: 75px;
+            background-color: $backgroundcol;
+            border-radius: $radiusdish;
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-top: 8px;
+            box-shadow: $shadowlist;
+            cursor: pointer;
+            transition: transform 400ms;
+            &:hover {
+                background-color: lighten($primary, 36%);
+                transform: scale(1.02);
+                i {
+                    color: $primary;
+                }
+            }
+        }
+        span {
+            background-color: $primary;
+            color: $policepucenum;
+            border-radius: 15px;
+            margin-right: 3px;
+            @include centerflex;
+            height: 22px;
+            width: 22px;
+            position: relative;
+            left: -15px;
+        }
+        i {
+            color: $policeiconerules;
+            text-align: center;
+            width: 25px;
+            margin-right: 15px;
+            transition: color 400ms;
+        }
+        p {
+            font-weight: bold;
+            font-size: $policesize1 * 0.85;
+        }
+    }
+}
+
+/* Mise en forme des titres*/
+.title {
+    font-size: $policesizetitle;
+}
+
+/* Mise en forme de la zone restaurants*/
+.cards {
+    margin-top: 20px;
+    a {
+        display: block;
+        margin-bottom: 5.5%;
+    }
+}
+
+/* Code responsive*/
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .rules {
+        padding: 65px 35px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+        ul {
+            width: 50%;
+        }
+    }
+    .title {
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            width: 48%;
+        }
+        .resto {
+            flex-direction: column;
+            &__descriptif {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__heading {
+                flex-direction: column;
+                /*}*/
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            width: 23%;
+        }
+        .resto {
+            flex-direction: column;
+            &__descriptif {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__heading {
+                flex-direction: column;
+                /*}*/
+            }
+        }
+    }
+    .rules {
+        padding: 65px 35px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            li {
+                width: 30%;
+                padding-right: 2%;
+            }
+        }
+    }
+}

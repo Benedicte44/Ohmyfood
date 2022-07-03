@@ -1,0 +1,39 @@
+/*Tailles des polices*/
+$policesize1: 18px; /*taille de police de base*/
+$cardtitle: 22px; /*taille des titres des cards*/
+$policesizetitle: 23px; /*taille de police des titres*/
+$policesectitledish: 18px; /*taille police présentation accueil, catégorie plat et nom plats*/
+$isize: 18px; /*taille des icones arrowback,....*/
+
+/*Couleurs des polices*/
+$policecol1: black; /*couleur de police principale*/
+$primary: #9356dc; /*couleur première de la charte graphique*/
+$secondary: #ff79da; /*couleur secondaire de la charte graphique*/
+$tertiary: #99e2d0; /*couleur tertiaire de la charte graphique*/
+$policebtncol: white; /*couleur de la police des boutons*/
+$policepucenum: white; /*couleur de la police des puces numérotées*/
+$policefooter: white; /*couleur du texte du footer*/
+$policecheck: white; /*couleur de police du check des menus*/
+$policeiconerules: #7e7e7eff; /*couleur de police des icones de la zone explicative*/
+$policenomresto: #101010ff; /*couleur du nom des restos dans les menus*/
+
+/*Polices*/
+$policelogo: "Shrikhand", sans-serif;
+$policetexte: "Roboto", sans-serif;
+
+/*Couleurs des background*/
+$backgroundcol: #f6f6f6ff; /*couleur de fond*/
+$backgroundcards: white; /*couleur de fond des cards*/
+$backgroundbtn: linear-gradient(180deg, $secondary 0%, $primary 100%);
+$backgroundfooter: #353535ff; /*couleur du background*/
+
+/*dégradé des boutons*/
+$backgroundheart: -webkit-linear-gradient($primary $secondary);
+
+/*border radius*/
+$radiusbtn: 30px; /* angle des coins des boutons */
+$radiusmenus: 35px; /* angles des coins des menus */
+$radiusdish: 15px; /* angles des coins des plats dans les menus */
+
+/*Ombres*/
+$shadowlist: 0px 5px 15px darken($backgroundcol, 10%); /*ombre des cards, listes page d'accueil...*/

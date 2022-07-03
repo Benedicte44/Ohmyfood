@@ -1,0 +1,12 @@
+/*Mise en forme du header*/
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 25px 0 25px;
+    height: 59px;
+    background-color: $backgroundcards;
+    img {
+        width: 160px;
+    }
+}

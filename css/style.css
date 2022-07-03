@@ -32,10 +32,12 @@
 /* Animation du coeur des cards*/
 @keyframes heart {
   0% {
+    transform: scale(0.4);
     color: #9356dc;
     opacity: 20%;
   }
   100% {
+    transform: scale(1);
     opacity: 100%;
     color: #ff79da;
   }
@@ -177,7 +179,7 @@ article {
 }
 .resto__heart:active .fa-solid {
   display: block;
-  animation: heart 1500ms forwards;
+  animation: heart 100ms;
 }
 
 @media screen and (min-width: 992px) {

@@ -3,10 +3,12 @@
 /* Animation du coeur des cards*/
 @keyframes heart {
     0% {
+        transform: scale(0.4);
         color: $primary;
         opacity: 20%;
     }
     100% {
+        transform: scale(1);
         opacity: 100%;
         color: $secondary;
     }

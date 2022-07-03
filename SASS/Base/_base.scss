@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: $policetexte;
+    color: $policecol1;
+    font-size: $policesize1;
+    background-color: $backgroundcol;
+}
+
+a {
+    color: $policecol1;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $policelogo;
+    font-size: $policesizetitle * 0.7;
+    letter-spacing: 0.8px;
+}
+
+article {
+    padding: 53px 20px 45px 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    article {
+        padding: 70px 35px 50px 35px;
+    }
+}

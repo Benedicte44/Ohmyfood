@@ -1,0 +1,46 @@
+/*Mise en forme du footer*/
+
+footer {
+    background-color: $backgroundfooter;
+    padding: 14px 25px;
+    color: $policefooter;
+    font-size: $policesize1 * 0.85;
+    ul {
+        list-style-type: none;
+        margin: 20px 0px 20px 0px;
+    }
+    li {
+        margin-bottom: 8px;
+        a {
+            color: $policefooter;
+            transition: font-weight 400ms;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        i {
+            display: block;
+            width: 20px;
+            font-size: 13px;
+        }
+    }
+}
+
+/* Code responsive*/
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        h1 {
+            margin-right: 5%;
+        }
+        ul {
+            display: flex;
+            width: 100%;
+            margin: 10px 0px;
+            li {
+                margin-right: 20px;
+            }
+        }
+    }
+}

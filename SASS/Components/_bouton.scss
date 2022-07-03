@@ -1,0 +1,18 @@
+/* les boutons principaux */
+.button {
+    background: $backgroundbtn;
+    color: $policebtncol;
+    font-size: $policesize1 * 0.85;
+    border: none;
+    border-radius: $radiusbtn;
+    padding: 15px 22px;
+    cursor: pointer;
+    filter: brightness(1);
+    box-shadow: $shadowlist;
+    transition: filter 400ms ease-in-out, transform 500ms;
+    &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0px 5px 15px $primary;
+        transform: scale(1.05);
+    }
+}

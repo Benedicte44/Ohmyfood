@@ -100,7 +100,7 @@
             align-items: flex-end;
             position: absolute;
             right: -55px;
-            transition: transform 400ms;
+            transition: transform 600ms;
             p {
                 font-weight: bold;
                 padding: 0px 22px 12px 0px;
@@ -118,6 +118,7 @@
             i {
                 color: $policecheck;
                 font-size: $policesize1 * 1.2;
+                transition: transform 600ms;
             }
         }
         &:hover {
@@ -131,6 +132,9 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+            }
+            .menu__selector i {
+                transform: rotate(360deg);
             }
         }
     }

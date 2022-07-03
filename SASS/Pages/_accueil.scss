@@ -6,7 +6,7 @@
     background-color: darken($backgroundcol, 5%);
     color: lighten(#000000, 30%);
     @include centerflex;
-    padding-left: 50px;
+    padding-left: 70px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
     i {
         font-size: $policesize1 * 0.9;

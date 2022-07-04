@@ -1,8 +1,8 @@
-/*Mise en forme flèche retour du header*/
+/*Mise en forme flèche retour du header des menus des pages dédiées à chaque*/
 
 .arrowback {
     position: absolute;
-    font-size: $isize*1.1;
+    font-size: $isize * 1.1;
     left: 22px;
     padding-top: 3px;
     &:hover {

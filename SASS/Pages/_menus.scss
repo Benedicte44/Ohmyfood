@@ -1,5 +1,6 @@
 /*Mise en forme des pages de menus*/
 
+/**** Mise en forme de l'image présente dans le bandeau des pages de menus****/
 .restopic {
     height: 318px;
     overflow: hidden;
@@ -10,6 +11,7 @@
     }
 }
 
+/**** Mise en forme de la zone contenant le nom du restaurant et le contenu du menu****/
 .menus {
     position: relative;
     top: -107px;
@@ -37,7 +39,7 @@
         }
     }
 }
-
+/******** Mise en forme de la sous partie contenant les plats ********/
 .menu {
     margin-top: 35px;
     &__category {
@@ -140,7 +142,7 @@
     }
 }
 
-/*Code responsive*/
+/*Code responsive en format desktop*/
 @media screen and (min-width: 992px) {
     .menus {
         display: flex;

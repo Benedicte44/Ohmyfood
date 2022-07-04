@@ -29,7 +29,7 @@
 /*Ombres*/
 /*ombre des cards, listes page d'accueil...*/
 /* Définition des animations de la page d'accueil*/
-/* Animation du coeur des cards*/
+/* Animation du coeur des cards et des menus*/
 @keyframes heart {
   0% {
     transform: scale(0.4);
@@ -42,7 +42,7 @@
     color: #ff79da;
   }
 }
-/* Animation du loader */
+/* Animation des logos Ohmyfood animés du loader */
 @keyframes loaderlogo {
   0% {
     transform: scaleY(1.1);
@@ -54,6 +54,7 @@
     transform: scaleY(1.1);
   }
 }
+/* Définition de la visibilité du loader au chargement de la page et disparition une fois celle-ci chargée*/
 @keyframes loader {
   0% {
     visibility: visible;
@@ -62,10 +63,10 @@
     opacity: 0.98;
   }
   100% {
-    visibility: hidden;
     opacity: 0;
   }
 }
+/*Animation de l'apparition progressive des plats des pages de menu*/
 @keyframes menucat {
   from {
     transform: translatey(20px);
@@ -76,6 +77,7 @@
     opacity: 1;
   }
 }
+/*Mise en forme des éléments généraux du site*/
 * {
   box-sizing: border-box;
   /* Opera/IE 8+ */
@@ -109,6 +111,7 @@ h1 {
   letter-spacing: 0.8px;
 }
 
+/*Mise en forme de la zone article de la page d'accueil et des menus*/
 article {
   padding: 53px 20px 45px 20px;
 }
@@ -118,7 +121,7 @@ article {
     padding: 70px 35px 50px 35px;
   }
 }
-/* Mise en forme des cards */
+/* Mise en forme des cards contenues dans la page d'accueil */
 .resto {
   border-radius: 15px;
   background-color: white;
@@ -179,19 +182,20 @@ article {
 }
 .resto__heart:active .fa-solid {
   display: block;
-  animation: heart 100ms;
+  animation: heart 400ms forwards;
 }
 
+/*Définition de l'animation du coeur au hover sur le fomat desktop*/
 @media screen and (min-width: 992px) {
   .resto__heart:hover .fa-regular {
     display: none;
   }
   .resto__heart:hover .fa-solid {
     display: inline-block;
-    animation: heart 1500ms forwards;
+    animation: heart 400ms forwards;
   }
 }
-/* les boutons principaux */
+/* Mise en forme des boutons principaux */
 .button {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   color: white;
@@ -210,7 +214,7 @@ article {
   transform: scale(1.05);
 }
 
-/*Mise en forme du loader lors du chargement de la page*/
+/*Mise en forme du loader lors du chargement de la page d'accueil du site*/
 .loader {
   display: flex;
   flex-direction: row;
@@ -221,6 +225,7 @@ article {
   top: 0;
   background-color: white;
   z-index: 100;
+  /*positionnemment du loader au dessus des éléments de la page*/
   visibility: hidden;
   animation: loader 2000ms;
 }
@@ -228,6 +233,7 @@ article {
   position: fixed;
   top: 50%;
   z-index: 101;
+  /*positionnement des logos Ohmyfood animés*/
   animation: loaderlogo 1000ms backwards;
 }
 .loader__image img {
@@ -285,12 +291,13 @@ article {
   position: fixed;
   top: 50%;
   z-index: 102;
+  /*positionnement du logo static Ohmyfood au dessus des logos animés*/
 }
 .loader__logo img {
   width: 100%;
 }
 
-/*Mise en forme flèche retour du header*/
+/*Mise en forme flèche retour du header des menus des pages dédiées à chaque*/
 .arrowback {
   position: absolute;
   font-size: 19.8px;
@@ -301,7 +308,7 @@ article {
   color: #9356dc;
 }
 
-/*Mise en forme du header*/
+/*Mise en forme du header présent sur toutes les pages du site*/
 header {
   display: flex;
   justify-content: center;
@@ -340,7 +347,7 @@ footer li i {
   font-size: 13px;
 }
 
-/* Code responsive*/
+/* Code responsive en format tablette et desktop du footer*/
 @media screen and (min-width: 768px) {
   footer {
     display: flex;
@@ -383,7 +390,7 @@ footer li i {
   margin-left: 15px;
 }
 
-/*zone de présentation */
+/*zone de présentation de l'entreprise*/
 .accroche {
   height: 280px;
   /*centrer horizontalement et verticalement plusieurs blocs*/
@@ -474,7 +481,7 @@ footer li i {
   margin-bottom: 5.5%;
 }
 
-/* Code responsive*/
+/* Mise en forme responsive en format tablette*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .rules {
     padding: 65px 35px;
@@ -514,6 +521,7 @@ footer li i {
     /*}*/
   }
 }
+/* Mise en forme responsive en format desktop*/
 @media screen and (min-width: 992px) {
   .cards {
     display: flex;
@@ -553,6 +561,7 @@ footer li i {
   }
 }
 /*Mise en forme des pages de menus*/
+/**** Mise en forme de l'image présente dans le bandeau des pages de menus****/
 .restopic {
   height: 318px;
   overflow: hidden;
@@ -563,6 +572,7 @@ footer li i {
   left: -20px;
 }
 
+/**** Mise en forme de la zone contenant le nom du restaurant et le contenu du menu****/
 .menus {
   position: relative;
   top: -107px;
@@ -591,6 +601,7 @@ footer li i {
   padding: 15px 45px;
 }
 
+/******** Mise en forme de la sous partie contenant les plats ********/
 .menu {
   margin-top: 35px;
 }
@@ -722,7 +733,7 @@ footer li i {
   transform: rotate(360deg);
 }
 
-/*Code responsive*/
+/*Code responsive en format desktop*/
 @media screen and (min-width: 992px) {
   .menus {
     display: flex;

@@ -1,6 +1,6 @@
 /* Définition des animations de la page d'accueil*/
 
-/* Animation du coeur des cards*/
+/* Animation du coeur des cards et des menus*/
 @keyframes heart {
     0% {
         transform: scale(0.4);
@@ -14,7 +14,7 @@
     }
 }
 
-/* Animation du loader */
+/* Animation des logos Ohmyfood animés du loader */
 @keyframes loaderlogo {
     0% {
         transform: scaleY(1.1);
@@ -27,6 +27,7 @@
     }
 }
 
+/* Définition de la visibilité du loader au chargement de la page et disparition une fois celle-ci chargée*/
 @keyframes loader {
     0% {
         visibility: visible;
@@ -35,11 +36,11 @@
         opacity: 0.98;
     }
     100% {
-        visibility: hidden;
         opacity: 0;
     }
 }
 
+/*Animation de l'apparition progressive des plats des pages de menu*/
 @keyframes menucat {
     from {
         transform: translatey(20px);

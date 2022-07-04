@@ -1,4 +1,4 @@
-/* Mise en forme des cards */
+/* Mise en forme des cards contenues dans la page d'accueil */
 
 .resto {
     border-radius: 15px;
@@ -59,12 +59,13 @@
             }
             .fa-solid {
                 display: block;
-                animation: heart 100ms;
+                animation: heart 400ms forwards;
             }
         }
     }
 }
 
+/*Définition de l'animation du coeur au hover sur le fomat desktop*/
 @media screen and (min-width: 992px) {
     .resto__heart {
         &:hover {
@@ -73,7 +74,7 @@
             }
             .fa-solid {
                 display: inline-block;
-                animation: heart 1500ms forwards;
+                animation: heart 400ms forwards;
             }
         }
     }

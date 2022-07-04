@@ -1,3 +1,4 @@
+/*Mise en forme des éléments généraux du site*/
 * {
     box-sizing: border-box; /* Opera/IE 8+ */
     -moz-box-sizing: border-box; /* Firefox, autres Gecko */
@@ -28,6 +29,7 @@ h1 {
     letter-spacing: 0.8px;
 }
 
+/*Mise en forme de la zone article de la page d'accueil et des menus*/
 article {
     padding: 53px 20px 45px 20px;
 }

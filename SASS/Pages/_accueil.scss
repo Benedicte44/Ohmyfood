@@ -22,7 +22,7 @@
     }
 }
 
-/*zone de présentation */
+/*zone de présentation de l'entreprise*/
 .accroche {
     height: 280px;
     @include centerflex;
@@ -107,7 +107,7 @@
     }
 }
 
-/* Code responsive*/
+/* Mise en forme responsive en format tablette*/
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .rules {
@@ -147,6 +147,7 @@
     }
 }
 
+/* Mise en forme responsive en format desktop*/
 @media screen and (min-width: 992px) {
     .cards {
         display: flex;

@@ -1,4 +1,4 @@
-/*Mise en forme du loader lors du chargement de la page*/@at-root
+/*Mise en forme du loader lors du chargement de la page d'accueil du site*/
 .loader {
     display: flex;
     flex-direction: row;
@@ -8,13 +8,13 @@
     width: 100%;
     top: 0;
     background-color: $backgroundcards;
-    z-index: 100;
+    z-index: 100; /*positionnemment du loader au dessus des éléments de la page*/
     visibility: hidden;
     animation: loader 2000ms;
     &__image {
         position: fixed;
         top: 50%;
-        z-index: 101;
+        z-index: 101; /*positionnement des logos Ohmyfood animés*/
         img {
             width: 100%;
         }
@@ -29,7 +29,7 @@
     &__logo {
         position: fixed;
         top: 50%;
-        z-index: 102;
+        z-index: 102; /*positionnement du logo static Ohmyfood au dessus des logos animés*/
         img {
             width: 100%;
         }

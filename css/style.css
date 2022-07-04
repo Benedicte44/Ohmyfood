@@ -121,6 +121,35 @@ article {
     padding: 70px 35px 50px 35px;
   }
 }
+/*Définition de l'animation du coeur*/
+.resto__heart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 19.8px;
+  cursor: pointer;
+}
+.resto__heart .fa-solid {
+  display: none;
+}
+.resto__heart:active .fa-regular {
+  display: none;
+}
+.resto__heart:active .fa-solid {
+  display: block;
+  animation: heart 400ms forwards;
+}
+
+/*Définition de l'animation du coeur au hover sur le fomat desktop*/
+@media screen and (min-width: 992px) {
+  .resto__heart:hover .fa-regular {
+    display: none;
+  }
+  .resto__heart:hover .fa-solid {
+    display: inline-block;
+    animation: heart 400ms forwards;
+  }
+}
 /* Mise en forme des cards contenues dans la page d'accueil */
 .resto {
   border-radius: 15px;
@@ -167,34 +196,7 @@ article {
   margin-bottom: 5px;
   letter-spacing: -0.1px;
 }
-.resto__heart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 19.8px;
-  cursor: pointer;
-}
-.resto__heart .fa-solid {
-  display: none;
-}
-.resto__heart:active .fa-regular {
-  display: none;
-}
-.resto__heart:active .fa-solid {
-  display: block;
-  animation: heart 400ms forwards;
-}
 
-/*Définition de l'animation du coeur au hover sur le fomat desktop*/
-@media screen and (min-width: 992px) {
-  .resto__heart:hover .fa-regular {
-    display: none;
-  }
-  .resto__heart:hover .fa-solid {
-    display: inline-block;
-    animation: heart 400ms forwards;
-  }
-}
 /* Mise en forme des boutons principaux */
 .button {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);

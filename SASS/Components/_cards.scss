@@ -44,38 +44,4 @@
         margin-bottom: 5px;
         letter-spacing: -0.1px;
     }
-    &__heart {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: $policesize1 * 1.1;
-        cursor: pointer;
-        .fa-solid {
-            display: none;
-        }
-        &:active {
-            .fa-regular {
-                display: none;
-            }
-            .fa-solid {
-                display: block;
-                animation: heart 400ms forwards;
-            }
-        }
-    }
-}
-
-/*Définition de l'animation du coeur au hover sur le fomat desktop*/
-@media screen and (min-width: 992px) {
-    .resto__heart {
-        &:hover {
-            .fa-regular {
-                display: none;
-            }
-            .fa-solid {
-                display: inline-block;
-                animation: heart 400ms forwards;
-            }
-        }
-    }
 }

@@ -79,12 +79,9 @@
 }
 /*Mise en forme des éléments généraux du site*/
 * {
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  -moz-box-sizing: border-box;
-  /* Firefox, autres Gecko */
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, autres WebKit */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
   margin: 0px;
   padding: 0px;
 }
@@ -226,16 +223,14 @@ article {
   width: 100%;
   top: 0;
   background-color: white;
-  z-index: 100;
-  /*positionnemment du loader au dessus des éléments de la page*/
+  z-index: 100; /*positionnemment du loader au dessus des éléments de la page*/
   visibility: hidden;
   animation: loader 2000ms;
 }
 .loader__image {
   position: fixed;
   top: 50%;
-  z-index: 101;
-  /*positionnement des logos Ohmyfood animés*/
+  z-index: 101; /*positionnement des logos Ohmyfood animés*/
   animation: loaderlogo 1000ms backwards;
 }
 .loader__image img {
@@ -292,8 +287,7 @@ article {
 .loader__logo {
   position: fixed;
   top: 50%;
-  z-index: 102;
-  /*positionnement du logo static Ohmyfood au dessus des logos animés*/
+  z-index: 102; /*positionnement du logo static Ohmyfood au dessus des logos animés*/
 }
 .loader__logo img {
   width: 100%;
@@ -360,7 +354,7 @@ footer li i {
   footer ul {
     display: flex;
     width: 100%;
-    margin: 10px 0px;
+    margin: 0px 0px;
   }
   footer ul li {
     margin-right: 20px;
@@ -496,11 +490,9 @@ footer li i {
   .rules ul {
     width: 50%;
   }
-
   .title {
     text-align: center;
   }
-
   .cards {
     display: flex;
     flex-direction: row;
@@ -545,7 +537,6 @@ footer li i {
     flex-direction: column;
     /*}*/
   }
-
   .rules {
     padding: 65px 35px;
   }
@@ -570,8 +561,10 @@ footer li i {
 }
 .restopic img {
   width: 110%;
+  height: 318px;
   position: relative;
   left: -20px;
+  object-fit: cover;
 }
 
 /**** Mise en forme de la zone contenant le nom du restaurant et le contenu du menu****/
@@ -742,7 +735,6 @@ footer li i {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-
   .menu {
     display: flex;
     flex-wrap: wrap;

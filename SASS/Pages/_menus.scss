@@ -6,8 +6,10 @@
     overflow: hidden;
     img {
         width: 110%;
+        height: 318px;
         position: relative;
         left: -20px;
+        object-fit: cover;
     }
 }
 

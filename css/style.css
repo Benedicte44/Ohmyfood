@@ -135,7 +135,7 @@ article {
 }
 .resto__heart:active .fa-solid {
   display: block;
-  animation: heart 400ms forwards;
+  animation: heart 600ms forwards;
 }
 
 /*Définition de l'animation du coeur au hover sur le fomat desktop*/

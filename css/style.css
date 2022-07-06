@@ -34,11 +34,9 @@
   0% {
     transform: scale(0.4);
     color: #9356dc;
-    opacity: 20%;
   }
   100% {
     transform: scale(1);
-    opacity: 100%;
     color: #ff79da;
   }
 }
@@ -79,9 +77,12 @@
 }
 /*Mise en forme des éléments généraux du site*/
 * {
-  box-sizing: border-box; /* Opera/IE 8+ */
-  -moz-box-sizing: border-box; /* Firefox, autres Gecko */
-  -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  -moz-box-sizing: border-box;
+  /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, autres WebKit */
   margin: 0px;
   padding: 0px;
 }
@@ -144,7 +145,7 @@ article {
   }
   .resto__heart:hover .fa-solid {
     display: inline-block;
-    animation: heart 400ms forwards;
+    animation: heart 600ms forwards;
   }
 }
 /* Mise en forme des cards contenues dans la page d'accueil */
@@ -223,14 +224,16 @@ article {
   width: 100%;
   top: 0;
   background-color: white;
-  z-index: 100; /*positionnemment du loader au dessus des éléments de la page*/
+  z-index: 100;
+  /*positionnemment du loader au dessus des éléments de la page*/
   visibility: hidden;
   animation: loader 2000ms;
 }
 .loader__image {
   position: fixed;
   top: 50%;
-  z-index: 101; /*positionnement des logos Ohmyfood animés*/
+  z-index: 101;
+  /*positionnement des logos Ohmyfood animés*/
   animation: loaderlogo 1000ms backwards;
 }
 .loader__image img {
@@ -287,7 +290,8 @@ article {
 .loader__logo {
   position: fixed;
   top: 50%;
-  z-index: 102; /*positionnement du logo static Ohmyfood au dessus des logos animés*/
+  z-index: 102;
+  /*positionnement du logo static Ohmyfood au dessus des logos animés*/
 }
 .loader__logo img {
   width: 100%;
@@ -490,9 +494,11 @@ footer li i {
   .rules ul {
     width: 50%;
   }
+
   .title {
     text-align: center;
   }
+
   .cards {
     display: flex;
     flex-direction: row;
@@ -537,6 +543,7 @@ footer li i {
     flex-direction: column;
     /*}*/
   }
+
   .rules {
     padding: 65px 35px;
   }
@@ -735,6 +742,7 @@ footer li i {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+
   .menu {
     display: flex;
     flex-wrap: wrap;

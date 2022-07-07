@@ -6,7 +6,6 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 0;
     background-color: $backgroundcards;
     z-index: 100; /*positionnemment du loader au dessus des éléments de la page*/
     visibility: hidden;
@@ -15,9 +14,6 @@
         position: fixed;
         top: 50%;
         z-index: 101; /*positionnement des logos Ohmyfood animés*/
-        img {
-            width: 100%;
-        }
         animation: loaderlogo 1000ms backwards;
         @for $i from 2 through 13 {
             &--#{$i} {
@@ -30,8 +26,5 @@
         position: fixed;
         top: 50%;
         z-index: 102; /*positionnement du logo static Ohmyfood au dessus des logos animés*/
-        img {
-            width: 100%;
-        }
     }
 }

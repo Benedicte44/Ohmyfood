@@ -222,7 +222,6 @@ article {
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 0;
   background-color: white;
   z-index: 100;
   /*positionnemment du loader au dessus des éléments de la page*/
@@ -235,9 +234,6 @@ article {
   z-index: 101;
   /*positionnement des logos Ohmyfood animés*/
   animation: loaderlogo 1000ms backwards;
-}
-.loader__image img {
-  width: 100%;
 }
 .loader__image--2 {
   transform: scaleY(2);
@@ -292,9 +288,6 @@ article {
   top: 50%;
   z-index: 102;
   /*positionnement du logo static Ohmyfood au dessus des logos animés*/
-}
-.loader__logo img {
-  width: 100%;
 }
 
 /*Mise en forme flèche retour du header des menus des pages dédiées à chaque*/

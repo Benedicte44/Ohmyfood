@@ -33,11 +33,9 @@
 @keyframes heart {
   0% {
     transform: scale(0.4);
-    color: #9356dc;
   }
   100% {
     transform: scale(1);
-    color: #ff79da;
   }
 }
 /* Animation des logos Ohmyfood animés du loader */
@@ -136,6 +134,10 @@ article {
 .resto__heart:active .fa-solid {
   display: block;
   animation: heart 600ms forwards;
+  background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*Définition de l'animation du coeur au hover sur le fomat desktop*/
@@ -146,6 +148,10 @@ article {
   .resto__heart:hover .fa-solid {
     display: inline-block;
     animation: heart 600ms forwards;
+    background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 /* Mise en forme des cards contenues dans la page d'accueil */

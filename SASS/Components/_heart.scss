@@ -15,6 +15,10 @@
         .fa-solid {
             display: block;
             animation: heart 600ms forwards;
+            background: linear-gradient(200deg, $primary 0%, $secondary 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
@@ -29,6 +33,14 @@
             .fa-solid {
                 display: inline-block;
                 animation: heart 600ms forwards;
+                background: linear-gradient(
+                    200deg,
+                    $primary 0%,
+                    $secondary 100%
+                );
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }

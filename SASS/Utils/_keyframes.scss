@@ -4,11 +4,9 @@
 @keyframes heart {
     0% {
         transform: scale(0.4);
-        color: $primary;
     }
     100% {
         transform: scale(1);
-        color: $secondary;
     }
 }
 

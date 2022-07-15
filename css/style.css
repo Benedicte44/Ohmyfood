@@ -21,14 +21,13 @@
 /*couleur de fond*/
 /*couleur de fond des cards*/
 /*couleur du background*/
-/*dégradé des boutons*/
 /*border radius*/
 /* angle des coins des boutons */
 /* angles des coins des menus */
 /* angles des coins des plats dans les menus */
 /*Ombres*/
 /*ombre des cards, listes page d'accueil...*/
-/* Définition des animations de la page d'accueil*/
+/* Définition des animations de la page d'accueil et des menus */
 /* Animation du coeur des cards et des menus*/
 @keyframes heart {
   0% {
@@ -119,6 +118,7 @@ article {
 }
 /*Définition de l'animation du coeur*/
 .resto__heart {
+  /*Mise en forme du conteneur des coeurs*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,12 +126,18 @@ article {
   cursor: pointer;
 }
 .resto__heart .fa-solid {
+  /*Mise en forme du coeur plein*/
   display: none;
 }
+.resto__heart:active {
+  /*Définition de l'animation au clic sur le coeur en format mobile et tablette*/
+}
 .resto__heart:active .fa-regular {
+  /*Disparition du coeur vide*/
   display: none;
 }
 .resto__heart:active .fa-solid {
+  /*Apparition du coeur plein avec un fond dégradé*/
   display: block;
   animation: heart 600ms forwards;
   background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
@@ -140,12 +146,16 @@ article {
   -webkit-text-fill-color: transparent;
 }
 
-/*Définition de l'animation du coeur au hover sur le fomat desktop*/
+/*Définition de l'animation du coeur au hover sur le format desktop*/
 @media screen and (min-width: 992px) {
+  .resto__heart:hover {
+    /*Disparition du coeur vide*/
+  }
   .resto__heart:hover .fa-regular {
     display: none;
   }
   .resto__heart:hover .fa-solid {
+    /*Apparition du coeur plein avec un fond dégradé*/
     display: inline-block;
     animation: heart 600ms forwards;
     background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
@@ -156,6 +166,7 @@ article {
 }
 /* Mise en forme des cards contenues dans la page d'accueil */
 .resto {
+  /*Mise en forme de la card*/
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 5px 15px #dddddd;
@@ -163,6 +174,7 @@ article {
   transition: transform 400ms;
 }
 .resto:hover {
+  /*Animation de la card au hover*/
   box-shadow: 0px 5px 15px #99e2d0;
   transform: scale(1.02);
 }
@@ -174,6 +186,7 @@ article {
   object-position: left bottom;
 }
 .resto figure p {
+  /*Mise en forme de la mention "Nouveau" des cards*/
   position: absolute;
   top: 14px;
   right: 10px;
@@ -185,6 +198,7 @@ article {
   letter-spacing: -0.5px;
 }
 .resto__descriptif {
+  /*Mise en forme du nom du restaurant, situation et du bouton "j'aime"*/
   padding: 3.5% 8% 6% 3.5%;
   display: flex;
   justify-content: space-between;
@@ -196,12 +210,13 @@ article {
   line-height: 14px;
 }
 .resto h2 {
+  /*Mise en forme du nom du restaurant*/
   font-size: 17.6px;
   margin-bottom: 5px;
   letter-spacing: -0.1px;
 }
 
-/* Mise en forme des boutons principaux */
+/* Mise en forme des boutons principaux "Explorez nos restaurants" page accueil et "Commander" sur les pages de menu */
 .button {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   color: white;
@@ -222,6 +237,7 @@ article {
 
 /*Mise en forme du loader lors du chargement de la page d'accueil du site*/
 .loader {
+  /*Mise en forme du conteneur global du loader*/
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -235,10 +251,10 @@ article {
   animation: loader 2000ms;
 }
 .loader__image {
+  /*Mise en forme des logos dynamiques du loader*/
   position: fixed;
   top: 50%;
   z-index: 101;
-  /*positionnement des logos Ohmyfood animés*/
   animation: loaderlogo 1000ms backwards;
 }
 .loader__image img {
@@ -293,6 +309,7 @@ article {
   animation-delay: 650ms;
 }
 .loader__logo {
+  /*Mise en forme du logo static du loader*/
   position: fixed;
   top: 50%;
   z-index: 102;
@@ -302,7 +319,7 @@ article {
   width: 100%;
 }
 
-/*Mise en forme flèche retour du header des menus des pages dédiées à chaque*/
+/*Mise en forme flèche retour vers la page d'accueil du header des pages de menus*/
 .arrowback {
   position: absolute;
   font-size: 19.8px;
@@ -370,12 +387,12 @@ footer li i {
   }
 }
 /**** Mise en forme de la page d'accueil ****/
-/*zone accueillant la zone de saisie pour la ville recherchée par l'utilisateur*/
+/*zone accueillant la zone de saisie de la ville recherchée par l'utilisateur*/
 .location {
   height: 49px;
   background-color: #e9e9e9;
   color: #4d4d4d;
-  /*centrer horizontalement et verticalement plusieurs blocs*/
+  /*composante qui permet de centrer horizontalement et verticalement plusieurs blocs*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,10 +412,10 @@ footer li i {
   margin-left: 15px;
 }
 
-/*zone de présentation de l'entreprise*/
+/*zone de présentation brève de l'entreprise*/
 .accroche {
   height: 280px;
-  /*centrer horizontalement et verticalement plusieurs blocs*/
+  /*composante qui permet de centrer horizontalement et verticalement plusieurs blocs*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,6 +457,7 @@ footer li i {
   transition: transform 400ms;
 }
 .rules ul li a:hover {
+  /*changement de couleur et agrandissement des "boutons" au hover*/
   background-color: #f4eefc;
   transform: scale(1.02);
 }
@@ -447,11 +465,12 @@ footer li i {
   color: #9356dc;
 }
 .rules ul span {
+  /*Mise en forme de la zone contenant le numéro de chaque "boutons"*/
   background-color: #9356dc;
   color: white;
   border-radius: 15px;
   margin-right: 3px;
-  /*centrer horizontalement et verticalement plusieurs blocs*/
+  /*composante qui permet de centrer horizontalement et verticalement plusieurs blocs*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,13 +491,14 @@ footer li i {
   font-size: 15.3px;
 }
 
-/* Mise en forme des titres*/
+/* Mise en forme des titres "Fonctionnement" "Restaurants"*/
 .title {
   font-size: 23px;
 }
 
-/* Mise en forme de la zone restaurants*/
+/* Mise en forme de la zone contenant les différents restaurants*/
 .cards {
+  /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
   margin-top: 20px;
 }
 .cards a {
@@ -489,6 +509,7 @@ footer li i {
 /* Mise en forme responsive en format tablette*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .rules {
+    /*Mise en forme de la zone d'explication du fonctionnement de l'application*/
     padding: 65px 35px;
     width: 100%;
     display: flex;
@@ -501,10 +522,12 @@ footer li i {
   }
 
   .title {
+    /*Mise en forme des titres "fonctionnement" et"Restaurants"*/
     text-align: center;
   }
 
   .cards {
+    /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -513,22 +536,11 @@ footer li i {
   .cards a {
     width: 48%;
   }
-  .cards .resto {
-    flex-direction: column;
-  }
-  .cards .resto__descriptif {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .cards .resto__heading {
-    flex-direction: column;
-    /*}*/
-  }
 }
 /* Mise en forme responsive en format desktop*/
 @media screen and (min-width: 992px) {
   .cards {
+    /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -536,20 +548,9 @@ footer li i {
   .cards a {
     width: 23%;
   }
-  .cards .resto {
-    flex-direction: column;
-  }
-  .cards .resto__descriptif {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .cards .resto__heading {
-    flex-direction: column;
-    /*}*/
-  }
 
   .rules {
+    /*Mise en forme de la zone d'explication du fonctionnement de l'application*/
     padding: 65px 35px;
   }
   .rules ul {
@@ -580,6 +581,7 @@ footer li i {
 }
 
 /**** Mise en forme de la zone contenant le nom du restaurant et le contenu du menu****/
+/* Mise en forme de l'article */
 .menus {
   position: relative;
   top: -107px;
@@ -589,18 +591,21 @@ footer li i {
   background-color: #f6f6f6;
 }
 .menus__nomresto {
+  /*Mise en forme de la zone contenant le nom du restaurant et le bouton j'aime*/
   display: flex;
   justify-content: space-between;
   padding-right: 15px;
   letter-spacing: 0.7px;
 }
 .menus__nomresto h2 {
+  /*Mise en forme du nom du restaurant*/
   font-family: "Shrikhand", sans-serif;
   font-size: 25.3px;
   color: #101010;
   font-weight: lighter;
 }
 .menus__order {
+  /*Mise en forme de la zone contenant le bouton "Commander"*/
   text-align: center;
   margin-top: 35px;
 }
@@ -608,16 +613,18 @@ footer li i {
   padding: 15px 45px;
 }
 
-/******** Mise en forme de la sous partie contenant les plats ********/
+/******** Mise en forme de la sous partie contenant les différents plats ********/
 .menu {
   margin-top: 35px;
 }
 .menu__category {
+  /* Mise en forme des différentes catégories de plats : entrées // plats // desserts */
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 .menu__category h3 {
+  /*Mise en forme du nom de la catégorie*/
   font-size: 15.3px;
   font-weight: 300;
   padding-bottom: 8px;
@@ -625,6 +632,7 @@ footer li i {
   margin-bottom: 13px;
 }
 .menu__category h3:after {
+  /*Mise en forme de la barre de soulignement*/
   content: "";
   position: absolute;
   width: 12%;
@@ -633,10 +641,8 @@ footer li i {
   left: 0%;
   border-bottom: 3px solid #99e2d0;
 }
-.menu__sstitlemargin {
-  margin-top: 25px;
-}
 .menu__dish {
+  /*Mise en forme de la div comprenant le nom du plat, son descriptif, son prix, et la coche*/
   display: flex;
   align-items: flex-end;
   border-radius: 15px;
@@ -685,6 +691,7 @@ footer li i {
   animation-delay: 3.6s;
 }
 .menu__dishtitle {
+  /*Mise en forme de la div comprenant le nom du plat et son descriptif*/
   width: 80%;
   padding: 13px 0px 12px 10px;
 }
@@ -700,18 +707,22 @@ footer li i {
   letter-spacing: -0.1px;
 }
 .menu__dish .menu__check {
+  /*Mise en forme de la div comprenant le prix et la coche*/
   display: flex;
   align-items: flex-end;
   position: absolute;
   right: -55px;
   transition: transform 600ms;
+  /*animation référence au translate créé à la ligne 139*/
 }
 .menu__dish .menu__check p {
+  /*Mise en forme du prix*/
   font-weight: bold;
   padding: 0px 22px 12px 0px;
   font-size: 13.5px;
 }
 .menu__dish .menu__selector {
+  /*Mise en forme de la zone comprenant la coche*/
   background-color: #99e2d0;
   padding: 0% 0 20% 0;
   width: 55px;
@@ -724,31 +735,34 @@ footer li i {
   color: white;
   font-size: 21.6px;
   transition: transform 600ms;
+  /*animation référence au rotate ligne 150*/
+}
+.menu__dish:hover {
+  /*animations déclenchées au hover de la zone contenant le nom du plat son descriptif, son prix et la coche*/
 }
 .menu__dish:hover .menu__check {
+  /*déclénchement de l'apparition de la coche*/
   transform: translateX(-55px);
 }
 .menu__dish:hover .menu__dishtitle {
+  /*réduction de la largeur de la zone contenant le nom du plat et son descriptif*/
   width: 60%;
 }
 .menu__dish:hover h4 {
+  /*définition du non retour à la ligne du nom des plats et de l'apparition des "..." s'il est tronqué au hover*/
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menu__dish:hover .menu__selector i {
+  /*déclenchement de la rotation de la coche*/
   transform: rotate(360deg);
 }
 
 /*Code responsive en format desktop*/
 @media screen and (min-width: 992px) {
-  .menus {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
   .menu {
+    /*définition de la dispoition des différentes catégories du menu en ligne*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -1,18 +1,23 @@
 /*Définition de l'animation du coeur*/
 .resto__heart {
+    /*Mise en forme du conteneur des coeurs*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: $policesize1 * 1.1;
     cursor: pointer;
     .fa-solid {
+        /*Mise en forme du coeur plein*/
         display: none;
     }
     &:active {
+        /*Définition de l'animation au clic sur le coeur en format mobile et tablette*/
         .fa-regular {
+            /*Disparition du coeur vide*/
             display: none;
         }
         .fa-solid {
+            /*Apparition du coeur plein avec un fond dégradé*/
             display: block;
             animation: heart 600ms forwards;
             background: linear-gradient(200deg, $primary 0%, $secondary 100%);
@@ -23,14 +28,16 @@
     }
 }
 
-/*Définition de l'animation du coeur au hover sur le fomat desktop*/
+/*Définition de l'animation du coeur au hover sur le format desktop*/
 @media screen and (min-width: 992px) {
     .resto__heart {
         &:hover {
+            /*Disparition du coeur vide*/
             .fa-regular {
                 display: none;
             }
             .fa-solid {
+                /*Apparition du coeur plein avec un fond dégradé*/
                 display: inline-block;
                 animation: heart 600ms forwards;
                 background: linear-gradient(

@@ -30,8 +30,9 @@
     </head>
 
     <body>
-        <!--        ************ Le loader animé de la page ************        -->
+        <!--        ************ Le loader animé au chargement de la page ************        -->
         <section class="loader">
+            <!--Insertion des 12 images colorées du logo qui subissent une animation-->
             <div class="loader__image loader__image--13">
                 <img
                     src="images/logo/ohmyfood-bleu.png"
@@ -104,6 +105,7 @@
                     alt="logo ohmyfood violet"
                 />
             </div>
+            <!--Insertion du logo static du loader-->
             <div class="loader__logo">
                 <img
                     src="images/logo/ohmyfood-rose.png"
@@ -111,7 +113,8 @@
                 />
             </div>
         </section>
-        <!--        ************ Le Header de la page ************        -->
+
+        <!--        ************ Le Header de la page contenant le logo ************        -->
         <header>
             <p>
                 <a href="#" class="header__logo">
@@ -126,8 +129,9 @@
 
         <!--        ************ Le contenu principal de la page ************     -->
         <main>
-            <!--Zone d'exploration-->
+            <!--Zone de saisie de la ville ciblée par le visiteur et présentation utilité du site -->
             <section>
+                <!-- -- Zone du formulaire où le visiteur peut saisir le nom de la ville où il souhaite effectuer sa recherche de restaurants --   -->
                 <form method="post" action="#" class="location">
                     <i class="fa-solid fa-location-dot"></i>
                     <input
@@ -137,6 +141,7 @@
                         class="ville"
                     />
                 </form>
+                <!-- -- Présentation brève de l'utilité de l'application -- -->
                 <div class="accroche">
                     <h3 class="title">Réservez le menu qui vous convient</h3>
                     <p>
@@ -144,6 +149,7 @@
                         nos soins.
                     </p>
 
+                    <!-- ---- Bouton d'exploration des restaurants qui mène à l'article contenant nos différents restaurants ---- -->
                     <input
                         onclick="window.location.href = '#restaurants';"
                         type="button"
@@ -153,7 +159,7 @@
                 </div>
             </section>
 
-            <!--Guide de fonctionnenment-->
+            <!--Guide de fonctionnenment reprenant les étapes à passer par le visiteur pour utiliser l'application-->
             <section class="rules">
                 <h4 class="title">Fonctionnement</h4>
                 <ul>
@@ -181,7 +187,7 @@
                 </ul>
             </section>
 
-            <!--Listes de restaurants-->
+            <!--Liste des différents restaurants référencés sur notre application dans la ville choisie par le visiteur -->
             <article id="restaurants">
                 <h4 class="title">Restaurants</h4>
                 <div class="cards">

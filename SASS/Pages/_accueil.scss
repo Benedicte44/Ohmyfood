@@ -1,6 +1,6 @@
 /**** Mise en forme de la page d'accueil ****/
 
-/*zone accueillant la zone de saisie pour la ville recherchée par l'utilisateur*/
+/*zone accueillant la zone de saisie de la ville recherchée par l'utilisateur*/
 .location {
     height: 49px;
     background-color: darken($backgroundcol, 5%);
@@ -22,7 +22,7 @@
     }
 }
 
-/*zone de présentation de l'entreprise*/
+/*zone de présentation brève de l'entreprise*/
 .accroche {
     height: 280px;
     @include centerflex;
@@ -61,6 +61,7 @@
             cursor: pointer;
             transition: transform 400ms;
             &:hover {
+                /*changement de couleur et agrandissement des "boutons" au hover*/
                 background-color: lighten($primary, 36%);
                 transform: scale(1.02);
                 i {
@@ -69,6 +70,7 @@
             }
         }
         span {
+            /*Mise en forme de la zone contenant le numéro de chaque "boutons"*/
             background-color: $primary;
             color: $policepucenum;
             border-radius: 15px;
@@ -93,13 +95,14 @@
     }
 }
 
-/* Mise en forme des titres*/
+/* Mise en forme des titres "Fonctionnement" "Restaurants"*/
 .title {
     font-size: $policesizetitle;
 }
 
-/* Mise en forme de la zone restaurants*/
+/* Mise en forme de la zone contenant les différents restaurants*/
 .cards {
+    /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
     margin-top: 20px;
     a {
         display: block;
@@ -111,6 +114,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .rules {
+        /*Mise en forme de la zone d'explication du fonctionnement de l'application*/
         padding: 65px 35px;
         width: 100%;
         display: flex;
@@ -122,9 +126,11 @@
         }
     }
     .title {
+        /*Mise en forme des titres "fonctionnement" et"Restaurants"*/
         text-align: center;
     }
     .cards {
+        /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -132,44 +138,22 @@
         a {
             width: 48%;
         }
-        .resto {
-            flex-direction: column;
-            &__descriptif {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-            &__heading {
-                flex-direction: column;
-                /*}*/
-            }
-        }
     }
 }
 
 /* Mise en forme responsive en format desktop*/
 @media screen and (min-width: 992px) {
     .cards {
+        /*Mise en forme de la zone contenant toutes les cards des différents restaurants*/
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         a {
             width: 23%;
         }
-        .resto {
-            flex-direction: column;
-            &__descriptif {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-            &__heading {
-                flex-direction: column;
-                /*}*/
-            }
-        }
     }
     .rules {
+        /*Mise en forme de la zone d'explication du fonctionnement de l'application*/
         padding: 65px 35px;
         ul {
             display: flex;

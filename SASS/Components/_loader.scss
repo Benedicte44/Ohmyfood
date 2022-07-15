@@ -1,5 +1,6 @@
 /*Mise en forme du loader lors du chargement de la page d'accueil du site*/
 .loader {
+    /*Mise en forme du conteneur global du loader*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,9 +12,10 @@
     visibility: hidden;
     animation: loader 2000ms;
     &__image {
+        /*Mise en forme des logos dynamiques du loader*/
         position: fixed;
         top: 50%;
-        z-index: 101; /*positionnement des logos Ohmyfood animés*/
+        z-index: 101;
         img {
             width: 100%;
         }
@@ -26,6 +28,7 @@
         }
     }
     &__logo {
+        /*Mise en forme du logo static du loader*/
         position: fixed;
         top: 50%;
         z-index: 102; /*positionnement du logo static Ohmyfood au dessus des logos animés*/

@@ -14,6 +14,8 @@
 }
 
 /**** Mise en forme de la zone contenant le nom du restaurant et le contenu du menu****/
+
+/* Mise en forme de l'article */
 .menus {
     position: relative;
     top: -107px;
@@ -22,11 +24,13 @@
     margin-bottom: -45px;
     background-color: $backgroundcol;
     &__nomresto {
+        /*Mise en forme de la zone contenant le nom du restaurant et le bouton j'aime*/
         display: flex;
         justify-content: space-between;
         padding-right: 15px;
         letter-spacing: 0.7px;
         h2 {
+            /*Mise en forme du nom du restaurant*/
             font-family: $policelogo;
             font-size: $policesizetitle * 1.1;
             color: $policenomresto;
@@ -34,6 +38,7 @@
         }
     }
     &__order {
+        /*Mise en forme de la zone contenant le bouton "Commander"*/
         text-align: center;
         margin-top: 35px;
         input {
@@ -41,20 +46,23 @@
         }
     }
 }
-/******** Mise en forme de la sous partie contenant les plats ********/
+/******** Mise en forme de la sous partie contenant les différents plats ********/
 .menu {
     margin-top: 35px;
     &__category {
+        /* Mise en forme des différentes catégories de plats : entrées // plats // desserts */
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         h3 {
+            /*Mise en forme du nom de la catégorie*/
             font-size: $policesectitledish * 0.85;
             font-weight: 300;
             padding-bottom: 8px;
             position: relative;
             margin-bottom: 13px;
             &:after {
+                /*Mise en forme de la barre de soulignement*/
                 content: "";
                 position: absolute;
                 width: 12%;
@@ -65,10 +73,8 @@
             }
         }
     }
-    &__sstitlemargin {
-        margin-top: 25px;
-    }
     &__dish {
+        /*Mise en forme de la div comprenant le nom du plat, son descriptif, son prix, et la coche*/
         display: flex;
         align-items: flex-end;
         border-radius: $radiusdish;
@@ -85,6 +91,7 @@
             }
         }
         &title {
+            /*Mise en forme de la div comprenant le nom du plat et son descriptif*/
             width: 80%;
             padding: 13px 0px 12px 10px;
             h4 {
@@ -100,18 +107,21 @@
             }
         }
         .menu__check {
+            /*Mise en forme de la div comprenant le prix et la coche*/
             display: flex;
             align-items: flex-end;
             position: absolute;
             right: -55px;
-            transition: transform 600ms;
+            transition: transform 600ms; /*animation référence au translate créé à la ligne 139*/
             p {
+                /*Mise en forme du prix*/
                 font-weight: bold;
                 padding: 0px 22px 12px 0px;
                 font-size: $policesize1 * 0.75;
             }
         }
         .menu__selector {
+            /*Mise en forme de la zone comprenant la coche*/
             background-color: $tertiary;
             padding: 0% 0 20% 0;
             width: 55px;
@@ -122,22 +132,27 @@
             i {
                 color: $policecheck;
                 font-size: $policesize1 * 1.2;
-                transition: transform 600ms;
+                transition: transform 600ms; /*animation référence au rotate ligne 150*/
             }
         }
         &:hover {
+            /*animations déclenchées au hover de la zone contenant le nom du plat son descriptif, son prix et la coche*/
             .menu__check {
+                /*déclénchement de l'apparition de la coche*/
                 transform: translateX(-55px);
             }
             .menu__dishtitle {
+                /*réduction de la largeur de la zone contenant le nom du plat et son descriptif*/
                 width: 60%;
             }
             h4 {
+                /*définition du non retour à la ligne du nom des plats et de l'apparition des "..." s'il est tronqué au hover*/
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
             .menu__selector i {
+                /*déclenchement de la rotation de la coche*/
                 transform: rotate(360deg);
             }
         }
@@ -146,12 +161,8 @@
 
 /*Code responsive en format desktop*/
 @media screen and (min-width: 992px) {
-    .menus {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
     .menu {
+        /*définition de la dispoition des différentes catégories du menu en ligne*/
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

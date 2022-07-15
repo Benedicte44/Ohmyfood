@@ -54,8 +54,11 @@
   0% {
     visibility: visible;
   }
-  99% {
-    opacity: 0.98;
+  98% {
+    opacity: 0.95;
+  }
+  99.9% {
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
@@ -119,9 +122,6 @@ article {
 /*Définition de l'animation du coeur*/
 .resto__heart {
   /*Mise en forme du conteneur des coeurs*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-size: 19.8px;
   cursor: pointer;
 }
@@ -138,12 +138,12 @@ article {
 }
 .resto__heart:active .fa-solid {
   /*Apparition du coeur plein avec un fond dégradé*/
-  display: block;
+  display: inline-block;
   animation: heart 600ms forwards;
   background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
-  background-clip: border-box;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /*Définition de l'animation du coeur au hover sur le format desktop*/
@@ -159,9 +159,9 @@ article {
     display: inline-block;
     animation: heart 600ms forwards;
     background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
-    background-clip: border-box;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 /* Mise en forme des cards contenues dans la page d'accueil */
@@ -239,7 +239,6 @@ article {
 .loader {
   /*Mise en forme du conteneur global du loader*/
   display: flex;
-  flex-direction: row;
   justify-content: center;
   position: fixed;
   height: 100%;
@@ -735,7 +734,7 @@ footer li i {
   color: white;
   font-size: 21.6px;
   transition: transform 600ms;
-  /*animation référence au rotate ligne 150*/
+  /*animation référence au rotate ligne 154*/
 }
 .menu__dish:hover {
   /*animations déclenchées au hover de la zone contenant le nom du plat son descriptif, son prix et la coche*/

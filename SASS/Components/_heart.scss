@@ -1,9 +1,6 @@
 /*Définition de l'animation du coeur*/
 .resto__heart {
     /*Mise en forme du conteneur des coeurs*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-size: $policesize1 * 1.1;
     cursor: pointer;
     .fa-solid {
@@ -18,12 +15,12 @@
         }
         .fa-solid {
             /*Apparition du coeur plein avec un fond dégradé*/
-            display: block;
+            display: inline-block;
             animation: heart 600ms forwards;
             background: linear-gradient(200deg, $primary 0%, $secondary 100%);
-            background-clip: border-box;
+            background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
     }
 }
@@ -45,9 +42,9 @@
                     $primary 0%,
                     $secondary 100%
                 );
-                background-clip: border-box;
+                background-clip: text;
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                color: transparent;
             }
         }
     }

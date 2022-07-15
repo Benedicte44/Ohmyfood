@@ -28,8 +28,11 @@
     0% {
         visibility: visible;
     }
-    99% {
-        opacity: 0.98;
+    98% {
+        opacity: 0.95;
+    }
+    99.9% {
+        opacity: 0.8;
     }
     100% {
         opacity: 0;
